@@ -1,0 +1,6 @@
+{
+  "name": "Roshani Eye & Dental Hospital - Gandhinagar",
+  "description": "Precision eye care and comprehensive dental care at Keshav Aaradhyam, Gandhinagar, Gujarat. Book consultations, explore ophthalmic & dental disciplines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #0f1221;
+    --color-surface-dim: #0f1221;
+    --color-surface-bright: #353849;
+    --color-surface-container-lowest: #0a0d1c;
+    --color-surface-container-low: #181b2a;
+    --color-surface-container: #1c1f2e;
+    --color-surface-container-high: #262939;
+    --color-surface-container-highest: #313444;
+    --color-on-surface: #e0e1f7;
+    --color-on-surface-variant: #c8c4d7;
+    --color-primary: #c6bfff;
+    --color-on-primary: #2700a0;
+    --color-primary-container: #8c80ff;
+    --color-on-primary-container: #22008e;
+    --color-secondary: #60d7e3;
+    --color-on-secondary: #00363b;
+    --color-secondary-container: #00a0ab;
+    --color-on-secondary-container: #002f33;
+    --color-secondary-fixed: #83f3ff;
+    --color-outline: #928ea1;
+    --color-outline-variant: #474555;
+    --color-obsidian: #101322;
+    --color-violet-accent: #7868FF;
+    --color-cyan-accent: #70E6F2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0f1221;
+    color: #e0e1f7;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #0f1221;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1221;
+}
+::-webkit-scrollbar-thumb {
+  background: #262939;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #353849;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(28, 31, 46, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(38, 41, 57, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(141, 150, 171, 0.2);
+}
+
+/* Ambient glow accents */
+.glow-violet {
+  box-shadow: 0px 12px 32px -4px rgba(120, 104, 255, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0px 12px 32px -4px rgba(112, 230, 242, 0.22);
+}
+
+/* Reduced motion preference handling */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
